@@ -1,0 +1,91 @@
+/* Styles specific to the resources page */
+.hero, .hero2 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.hero {
+    background-image: url('elaine-casap-qgHGDbbSNm8-unsplash.jpg');
+}
+
+.hero2 {
+    background-image: url('marcel-strauss-fzqxoFJytiE-unsplash.jpg');
+    margin-top: 40px; /* Added to create a gap */
+}
+
+.hero h1, .hero2 h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p, .hero2 p {
+    font-size: 1.2em;
+}
+
+.resources {
+    margin-top: 40px;
+}
+
+.resource-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.resource-link {
+    text-decoration: none; /* Ensure no underline on links */
+}
+
+.resource-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    color: #FF7F00;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.resource-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.resource-card p {
+    font-size: 1.1em;
+    color: #3E8E41;
+}
+
+.resources h2 {
+    color: #386641;
+}
+
+@media (max-width: 768px) {
+    .resource-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resource-card {
+        width: 80%; /* Adjust width as needed */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 574px) {
+    .resource-card {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
