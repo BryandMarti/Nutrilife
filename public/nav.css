@@ -25,12 +25,13 @@ nav {
     margin-right: 10px;
 }
 .nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    flex: 2;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  flex: 2;
+  justify-content: center;
 }
 .nav-links li {
     margin-left: 20px;
@@ -59,7 +60,7 @@ nav {
     transition: 0.4s;
 }
 .right-menu {
-    flex: 1;
+    flex: 0;
     display: flex;
     justify-content: flex-end;
 }
@@ -95,7 +96,7 @@ nav {
     align-items: center;
 }
 .subscribe-form .left img {
-    width: 100%;
+    width: 90%;
     height: auto;
     max-width: 400px; /* Limit the maximum width */
 }

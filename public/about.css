@@ -3,6 +3,7 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
 }
 
 .mission-paragraph {
@@ -19,7 +20,6 @@ html, body {
     background-position: center;
     padding: 20px;
 }
-
 
 .mission-paragraph h3, 
 .mission-paragraph p {
@@ -82,7 +82,6 @@ html, body {
     padding-left: 10em;
 }
 
-
 .dietitian-paragraph {
     padding-left: 70px;
     width: 30%;
@@ -94,7 +93,6 @@ html, body {
     height: auto;
     padding: 40px 0;
 }
-
 
 .dietitian-img:hover {
     opacity: 0.6;
@@ -144,15 +142,19 @@ html, body {
     transform: translateY(-50%);
     transition: transform 0.1s linear;
  }
+
 .wrapper i:active{
     transform: translateY(-50%) scale(0.85);
 }
+
 .wrapper i:first-child{
     left: -22px;
 }
+
 .wrapper i:last-child{
     right: -22px;
 }
+
 .wrapper .carousel{
     display: grid;
     grid-auto-flow: column;
@@ -164,25 +166,31 @@ html, body {
     scroll-behavior: smooth;
     scrollbar-width: none;
 }
+
 .carousel::-webkit-scrollbar {
     display: none;
 }
+
 .carousel.no-transition {
     scroll-behavior: auto;
 }
+
 .carousel.dragging {
     scroll-snap-type: none;
     scroll-behavior: auto;
 }
+
 .carousel.dragging .card {
     cursor: grab;
     user-select: none;
 }
+
 .carousel :where(.card, .img) {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .carousel .card {
     scroll-snap-align: start;
     height: 342px;
@@ -193,12 +201,14 @@ html, body {
     flex-direction: column;
     border-radius: 8px;
 }
+
 .carousel .card .img {
     background-color: #FF7F00;
     height: 148px;
     width: 148px;
     border-radius: 50%;
 }
+
 .card .img img {
     width: 140px;
     height: 140px;
@@ -206,22 +216,240 @@ html, body {
     object-fit: cover;
     border: 4px solid #fff;
 }
+
 .carousel .card h2 {
     font-weight: 500;
     font-size: 1.56rem;
     margin: 30px 0 5px;
 }
+
 .carousel .card span {
     color: #6A6D78;
     font-size: 1.31rem;
 }
-@media screen and (max-width: 900px) {
+
+/* Tablet queries */
+@media screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+    .mission-paragraph {
+        background-image: url('images/background.png');
+        height: 60vh;
+        width: 100vw;
+    }
+
+    .mission-paragraph h3 {
+        font-size: 2em;
+    }
+    
+        .mission-paragraph p {
+        font-size: 1.5em;
+    }
+
+    .statistics-section {
+        flex-direction: column;
+        width: 100%;
+        height:100%;
+    }
+    
+    .statistics-paragraph {
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 16px;
+    }
+    
+    .statistics-paragraph h3 {
+        font-size: 2em;
+    }
+    
+    .statistics-paragraph p {
+        font-size: 1.5em;
+    }
+
+    .dietitian-section h3 {
+        font-size: 2em;
+    }
+    
+    .dietitian-article {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .dietitian-picture {
+        padding-left: 0;
+        margin-bottom: 50px;
+    }
+    
+    .dietitian-paragraph {
+        padding-left: 0;
+        width: 60%;
+        font-size: 1.5em;
+    }
+    
+    .dietitian-img {
+        width: 80%;
+        height: auto;
+        padding: 0;
+    }
+    
+    .dietitian-paragraph button {
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+
     .wrapper .carousel {
-      grid-auto-columns: calc((100% / 2) - 9px);
+        grid-auto-columns: calc((100% / 3) - 12px);
     }
 }
-@media screen and (max-width: 600px) {
+
+/* Phone queries */
+@media(max-width: 768px) {
+    .mission-paragraph {
+        background-image: url('images/background.png');
+        background-size: 100vw;
+        height: 60vh;
+        width: 100vw;
+}
+
+    .mission-paragraph h3 {
+        font-size: 1.5em;
+}
+
+    .mission-paragraph p {
+        font-size: 1em;
+}
+
+    .statistics-section {
+        flex-direction: column;
+        width: 100vw;
+        height:90vh;
+}
+
+    .statistics-paragraph {
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 16px;
+}
+
+    .statistics-paragraph h3 {
+        font-size: 1.5em;
+}
+
+    .statistics-paragraph p {
+        font-size: 1em;
+}
+
+    .dietitian-section h3 {
+        font-size: 1.5em;
+}
+
+    .dietitian-article {
+        flex-direction: column;
+        text-align: center;
+}
+
+    .dietitian-picture {
+        padding-left: 0;
+        margin-bottom: 30px;
+}
+
+    .dietitian-paragraph {
+        padding-left: 0;
+        width: 60%;
+        font-size: 1em;
+}
+
+    .dietitian-img {
+        width: 50%;
+        height: auto;
+        padding: 0;
+}
+
+    .dietitian-paragraph button {
+        font-size: 12px;
+        padding: 8px 12px;
+}
+
     .wrapper .carousel {
-      grid-auto-columns: 100%;
+        grid-auto-columns: 100%;
+}
+}
+
+/* Smaller devices queries */
+@media only screen and (max-width: 480px) {
+    .mission-paragraph {
+        background-image: url('images/background.png');
+        height:50vh;
+        width: 100vw;
+    }
+
+    .mission-paragraph h3 {
+        font-size: 1em;
+    }
+
+    .mission-paragraph p {
+        font-size: .5em;
+    }
+
+    .statistics-section {
+        flex-direction: column;
+        width: 100vw;
+        height: 60vh
+    }
+
+    .statistics-paragraph {
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .statistics-paragraph h3 {
+        font-size: 1em;
+    }
+
+    .statistics-paragraph p {
+        font-size: .5em;
+    }
+
+    .chart-img {
+        width: 100%;
+        height: 150%;
+
+    }
+
+    .dietitian-section h3 {
+        font-size: 1em;
+    }
+
+    .dietitian-article {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .dietitian-picture {
+        padding-left: 0;
+        margin-bottom: 30px;
+    }
+
+    .dietitian-paragraph {
+        padding-left: 0;
+        width: 60%;
+        font-size: .5em;
+    }
+
+    .dietitian-img {
+        width: 50%;
+        height: auto;
+        padding: 0;
+    }
+
+    .dietitian-paragraph button {
+        font-size: 8px;
+        padding: 6px 10px;
+    }
+
+    .staff-section h3 {
+        font-size: 18px;
     }
 }
