@@ -29,4 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault(); // Prevents default form submission
         console.log('Subscribe button clicked');
     });
+    if (overlay) {
+      overlay.addEventListener('click', () => {
+        hideSubscribeForm();
+      });
+    }
 });

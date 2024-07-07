@@ -1,3 +1,25 @@
+/* Common styles for both pages */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color:white;
+  padding: 2ch 0;
+  
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+
 /* Styles specific to the resources page */
 .hero, .hero2 {
   background-size: cover;
@@ -69,7 +91,9 @@
 }
 
 .resources h2 {
+  display: flex;
   color: #386641;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
