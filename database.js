@@ -24,6 +24,11 @@ const connection = mysql.createConnection({
   database: 'sql5717815'
 });
 
+connection.connect(function(err) {
+  if (err) throw err;
+  console.log('Connection successful');
+});
+
 // Serve static HTML files
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'home.html'));
@@ -32,16 +37,35 @@ app.get('/', (req, res) => {
 app.post("/subscribe", async (req, res) => {
   const email = req.body.email;
 
-  connection.query('INSERT INTO subscriptions (email) VALUES (?)', [email], function (err, results) {
+  connection.query(`INSERT INTO subscriptions (email) VALUES ('${email}')`, function (err, results) {
     if (err) {
       console.error('Error querying the database:', err.stack);
       res.status(500).json({ error: 'Database error' });
       return;
     }
     console.log('Query results:', results);
-    res.send('Subscription successful');
+    res.redirect('/');
   });
 });
+
+app.post("/form", (req, res) => {
+  const { firstname, lastname, email, subject } = req.body;
+
+  const query = `INSERT INTO Form (first_Name, last_Name, email, subject) VALUES (?, ?, ?, ?)`;
+  const values = [firstname, lastname, email, subject];
+
+  connection.query(query, values, (err, results) => {
+    if (err) {
+      console.error('Error querying the database:', err.stack);
+      res.status(500).json({ error: 'Database error' });
+      return;
+    }
+    console.log('Query results:', results);
+    res.redirect('/');
+  });
+});
+
+
 
 
 // API route for recipe search
@@ -66,7 +90,7 @@ app.get('/search-recipes', async (req, res) => {
       ignorePantry: 'false',
       sort: 'max-used-ingredients',
       offset: '0',
-      number: '2'
+      number: '3'
     },
     headers: {
       'x-rapidapi-key': '1fbb6bafc4msh07902fb84e5a92ep1b86b1jsne8f63e4210e5',
