@@ -109,7 +109,7 @@ body {
   color: #666;
   text-align: center;
 }
-@media (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   header {
       flex-direction: column;
       align-items: flex-start;
@@ -122,15 +122,11 @@ body {
       display: flex;
   }
   .nav-links {
-      display: none;
-      flex-direction: column;
-      gap: 0;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      background: #333;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 1rem;
   }
+
   .nav-links li {
       text-align: center;
       padding: 10px 0;
