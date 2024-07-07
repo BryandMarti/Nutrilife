@@ -9,7 +9,7 @@ Usage.
 
 
 Introduction:
-Nutrilife is an innovative app designed to provide users with healthy and delicious recipes. We aim to simplify the process of cooking nutritious meals by offering clear instructions and a user-friendly interface. We also emphasize how healthy eating goes in hand with a healthy mind, so there is a resource center for good mental health tips and advice.
+Nutrilife is an innovative app designed to provide users with healthy and delicious recipes. We aim to simplify the process of cooking nutritious meals by offering clear instructions and a user-friendly interface.
 
 
 Features:
