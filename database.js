@@ -2,6 +2,9 @@ const express = require('express');
 const mysql = require('mysql2');
 const path = require('path');
 const axios = require('axios');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -17,11 +20,11 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Database connection setup
 const connection = mysql.createConnection({
-  host: 'sql5.freesqldatabase.com',
-  user: 'sql5717815',
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
   port: 3306,
-  password: 'Vw3E5gnnnF',
-  database: 'sql5717815'
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE
 });
 
 connection.connect(function(err) {
@@ -65,9 +68,6 @@ app.post("/form", (req, res) => {
   });
 });
 
-
-
-
 // API route for recipe search
 app.get('/search-recipes', async (req, res) => {
   const { query, diet, intolerances, includeIngredients, excludeIngredients, maxReadyTime } = req.query;
@@ -93,7 +93,7 @@ app.get('/search-recipes', async (req, res) => {
       number: '3'
     },
     headers: {
-      'x-rapidapi-key': '1fbb6bafc4msh07902fb84e5a92ep1b86b1jsne8f63e4210e5',
+      'x-rapidapi-key': process.env.RAPIDAPI_KEY,
       'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
     }
   };
@@ -121,7 +121,6 @@ app.get('/search-recipes', async (req, res) => {
     res.status(500).json({ error: 'An error occurred while searching recipes.' });
   }
 });
-
 
 app.get('/about', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'about.html'));
