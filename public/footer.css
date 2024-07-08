@@ -91,10 +91,12 @@ ul {
 }
 
 .footer-bottom {
+  display: flex;
   width: 100%;
   text-align: center;
   bottom: 0;
   margin-bottom: 10px;
+  justify-content: center;
 }
 
 .footer-bottom p {
@@ -144,7 +146,7 @@ ul {
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 767px) { 
+@media screen and (min-width: 275px) and (max-width: 767px) { 
 
   .footer .row {
       display: flex;
