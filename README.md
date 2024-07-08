@@ -1,5 +1,5 @@
-<img src="/public/logo-removebg.png" alt="logo" width="100" height="100">
-<h1>Nutrilife</h1>
+<img src="/public/logo-removebg.png" alt="logo" width="75%" height="75%">
+<a href="https://nutrilife-t06p.onrender.com/home.html"><h1>Nutrilife</h1></a>
 <p>Welcome to Nutrilife! We are dedicated to making healthy eating accessible and enjoyable for everyone. Our mission is to offer a wide range of easy-to-follow, nutritious recipes, proving that prioritizing your health doesn't have to be complicated. We also emphasize on how healthy eating goes in hand with a healthy mind, so there's a resource center for good mental health tips and advice.</p>
 <h2>Table of Contents</h2>
 <ul>
