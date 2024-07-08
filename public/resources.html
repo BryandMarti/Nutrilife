@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources Page</title>
+    <title>Resources</title>
     <link rel="stylesheet" href="resources.css">
-    <link rel="stylesheet" href="nav.css"> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="icon" href="logo-removebg.png">
+
 </head>
 <body>
   <header>
@@ -26,7 +29,7 @@
           <li><a href="form/form.html">Contact Us</a></li>
       </ul>
          <!-- <div class="right-menu">
-           <div id="subscribe-form" class="subscribe-form">
+            <div id="subscribe-form" class="subscribe-form">
                 <div class="close-btn" id="close-btn">&times;</div>
                 <div class="left">
                     <img src="images/annie-spratt-f4gQ-dJ0yo8-unsplash.jpg" alt="Recipe in a laptop" width="100%">
@@ -47,17 +50,15 @@
             </div>
             <div class="center">
                 <button id="subscribe-btn">Subscribe</button>
-            </div> -->
-        </div>
+            </div>
+        </div> -->
     </nav>
 </header>
-
     <main>
         <section class="hero">
             <h1>Another Helping Hand</h1>
             <p>Find important resources for food and mental health support below.</p>
         </section>
-
         <section id="food-resources" class="resources">
             <h2>Food Resources</h2>
             <div class="resource-container">
@@ -67,7 +68,7 @@
                         <p>Locate food banks in your area.</p>
                     </div>
                 </a>
-                <a href="nutrition-tips.html" class="resource-link">
+                <a href="https://www.nutrition.gov/" class="resource-link">
                     <div class="resource-card">
                         <h3>Nutrition Tips</h3>
                         <p>Learn about healthy eating habits.</p>
@@ -75,7 +76,6 @@
                 </a>
             </div>
         </section>
-
         <section id="mental-health-resources" class="resources">
             <h2>Mental Health Resources</h2>
             <div class="resource-container">
@@ -85,7 +85,7 @@
                         <p>Get immediate help from professionals.</p>
                     </div>
                 </a>
-                <a href="support-groups.html" class="resource-link">
+                <a href="https://www.nami.org/support-education/support-groups/" class="resource-link">
                     <div class="resource-card">
                         <h3>Support Groups</h3>
                         <p>Join local support groups for mental health.</p>
@@ -93,44 +93,41 @@
                 </a>
             </div>
         </section>
-        
         <section class="hero2"></section>
     </main>
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <img class="page-logo" src="logo-removebg (2).png">
-                <div class="footer-column">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Meals & Recipes</a></li>
-                        <li><a href="#">Resources</a></li>
-                        <li><a href="#">About Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Get In Touch</h4>
-                    <ul>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Nutrilife@gmail.com</a></li>
-                        <li><a href="#">+1 800-569-7070</a></li>
-                        <li><a href="#">2500 North Avenue, New York, 10001</a></li>
-                    </ul>
-                    <a href="https://www.instagram.com"><img class="social-icon" src="instagram.png" alt="Instagram Icon"></a>
-                    <a href="https://x.com"><img class="social-icon" src="twitter.png" alt="Twitter Icon"></a>
-                    <a href="https://www.facebook.com"><img class="social-icon" src="facebook.png" alt="Facebook Icon"></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>Copyright &copy; 2024 Nutrilife | All rights reserved | Privacy Policy | Accessibility </p>
-        </div>
+      <div class="container">
+          <div class="row">
+              <img class="page-logo" src="/images/logo-removebg.png">
+              <div class="footer-column">
+                  <h4>Navigation</h4>
+                  <ul>
+                    <li><a href="/home.html">Home</a></li>
+                    <li><a href="/meal.html">Meals & Recipes</a></li>
+                    <li><a href="/resources">Resources</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                  </ul>
+              </div>
+              <div class="footer-column">
+                  <h4>Get In Touch</h4>
+                  <ul>
+                      <li><a href="form/form.html">Contact Us</a></li>
+                      <li><a href="#">Nutrilife@gmail.com</a></li>
+                      <li><a href="#">+1 800-569-7070</a></li>
+                      <li><a href="#">2500 North Avenue, New York, 10001</a></li>
+                  </ul>
+                  <a href="https://www.instagram.com"><img class="social-icon" src="images/instagram.png" alt="Instagram Icon"></a>
+                  <a href="https://x.com"><img class="social-icon" src="images/twitter.png" alt="Twitter Icon"></a>
+                  <a href="https://www.facebook.com"><img class="social-icon" src="images/facebook.png" alt="Facebook Icon"></a>
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>Copyright &copy; 2024 Nutrilife | All rights reserved | Privacy Policy | Accessibility </p>
+      </div>
     </footer>
-
     <div id="overlay"></div>
-
+    <script src="hamburger.js"></script>
     <script src="nav.js"></script>
-    <script src="/app.js"></script>
-  </body>
+    <script src="/app.js"></script></body>
 </html>

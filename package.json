@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "nav.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm install",
+    "start": "node database.js"
   },
   "keywords": [],
   "author": "",

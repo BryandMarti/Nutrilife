@@ -75,8 +75,9 @@ input {
     outline: none;
 }
 #social-logo{
-    width:50px;
-    height: auto;
+  padding-bottom: 10px;
+  width: 35px;
+  height: auto;
 }
 #social-logo:hover{
     transform: scale(1.1);

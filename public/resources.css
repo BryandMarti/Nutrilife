@@ -1,26 +1,3 @@
-/* Common styles for both pages */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-header {
-  background-color:white;
-  padding: 2ch 0;
-  
-}
-
-main {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 0 20px;
-}
-
-
-/* Styles specific to the resources page */
 .hero, .hero2 {
   background-size: cover;
   background-position: center;
@@ -32,40 +9,40 @@ main {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  flex-direction: column;
 }
-
 .hero {
   background-image: url('elaine-casap-qgHGDbbSNm8-unsplash.jpg');
 }
-
 .hero2 {
   background-image: url('marcel-strauss-fzqxoFJytiE-unsplash.jpg');
-  margin-top: 40px; /* Added to create a gap */
+  background-size: contain;
+  background-position: center top;
+  margin-top: 20px;
 }
-
 .hero h1, .hero2 h1 {
   font-size: 3em;
   margin-bottom: 20px;
 }
-
 .hero p, .hero2 p {
   font-size: 1.2em;
 }
-
 .resources {
   margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-
 .resource-container {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
+  width: 100%;
 }
-
 .resource-link {
-  text-decoration: none; /* Ensure no underline on links */
+  text-decoration: none;
 }
-
 .resource-card {
   background-color: #fff;
   padding: 20px;
@@ -75,41 +52,59 @@ main {
   transition: transform 0.3s ease;
   color: #FF7F00;
 }
-
 .resource-card:hover {
   transform: translateY(-5px);
 }
-
 .resource-card h3 {
   font-size: 1.5em;
   margin-bottom: 10px;
 }
-
 .resource-card p {
   font-size: 1.1em;
   color: #3E8E41;
 }
-
 .resources h2 {
-  display: flex;
   color: #386641;
-  justify-content: center;
 }
-
+@media (max-width: 1024px) {
+  .hero h1, .hero2 h1 {
+      font-size: 2.5em;
+  }
+  .hero p, .hero2 p {
+      font-size: 1.1em;
+  }
+}
 @media (max-width: 768px) {
+  .hero, .hero2 {
+      height: 50vh;
+  }
+  .hero h1, .hero2 h1 {
+      font-size: 4em;
+  }
+  .hero p, .hero2 p {
+      font-size: 1.5em;
+  }
   .resource-container {
       flex-direction: column;
       align-items: center;
   }
-
   .resource-card {
-      width: 80%; /* Adjust width as needed */
       margin-bottom: 20px;
   }
 }
-
 @media (max-width: 574px) {
+  .hero, .hero2 {
+      height: 35vh;
+      padding: 10px;
+  }
+  .hero h1, .hero2 h1 {
+      font-size: 1.5em;
+  }
+  .hero p, .hero2 p {
+      font-size: 0.9em;
+  }
   .resource-card {
-      width: 100%; /* Full width on smaller screens */
+      width: 100%;
+      margin-bottom: 10px;
   }
 }
