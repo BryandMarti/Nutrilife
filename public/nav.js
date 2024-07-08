@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
       overlay.style.display = 'block';
     });
   }
-
   // Hide the subscribe form and overlay when the close button is clicked
   if (closeBtn) {
     closeBtn.addEventListener('click', () => {

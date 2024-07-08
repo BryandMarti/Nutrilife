@@ -67,11 +67,9 @@ app.post("/form", (req, res) => {
     res.redirect('/');
   });
 });
-
 // API route for recipe search
 app.get('/search-recipes', async (req, res) => {
   const { query, diet, intolerances, includeIngredients, excludeIngredients, maxReadyTime } = req.query;
-
   const options = {
     method: 'GET',
     url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch',
