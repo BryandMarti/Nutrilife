@@ -1,5 +1,9 @@
 body {
+<<<<<<< HEAD
   font-family: Arial, sans-serif;
+=======
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+>>>>>>> main
   margin: 0;
   padding: 0;
   background-color: #fff;
@@ -163,13 +167,34 @@ body {
       font-size: 1rem;
   }
 }
+<<<<<<< HEAD
 @media screen and (min-width: 375px) and (max-width: 767px)  {
+=======
+@media screen and (min-width: 250px) and (max-width: 767px)  {
+>>>>>>> main
   .logo {
       font-size: 2rem;
   }
   .banner {
       height: 50vh;
   }
+<<<<<<< HEAD
+=======
+
+  .promo {
+    font-size: 0.6rem;
+  }
+
+  .banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    padding: 0;
+  }
+  .btn {
+    padding: 0.5rem 0.5rem;
+  }
+>>>>>>> main
   .banner-content h2 {
       font-size: 1.2rem;
   }
@@ -179,6 +204,10 @@ body {
   }
   .banner-content p {
       font-size: 1rem;
+<<<<<<< HEAD
+=======
+      margin-bottom: 0;
+>>>>>>> main
   }
   .popular-meals h2 {
     font-size: 1.1rem;
@@ -202,4 +231,8 @@ body {
       width: 100%;
       height: auto;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 }
