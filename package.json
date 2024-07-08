@@ -1,0 +1,20 @@
+{
+  "name": "untitled-folder",
+  "version": "1.0.0",
+  "main": "nav.js",
+  "scripts": {
+    "build": "npm install",
+    "start": "node database.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mysql2": "^3.10.2",
+    "nodemon": "^3.1.4"
+  }
+}

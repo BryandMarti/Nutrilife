@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nutrilife company contact form">
+    <title>Contact Nutrilife</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="/footer.css">
+    <link rel="stylesheet" href="/nav.css">
+    <link rel="icon" href="/logo-removebg.png">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="/home.html"><img src="/images/logo-removebg.png" alt="Nutrilife Logo"></a>
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/meal.html">Meals & Recipes</a></li>
+        <li><a href="/resources.html">Resources</a></li>
+        <li><a href="form/form.html">Contact Us</a></li>
+      </ul>
+      <div class="right-menu">
+        <div id="subscribe-form" class="subscribe-form" style="display: none;">
+          <div class="close-btn" id="close-btn">&times;</div>
+          <div class="left">
+            <img src="/images/annie-spratt-f4gQ-dJ0yo8-unsplash.jpg" alt="Recipe in a laptop" width="100%">
+          </div>
+          <div class="right">
+            <h2>Subscribe to our newsletter!</h2>
+            <p>Weekly recipes sent right to your email.</p>
+            <form class="form" method="POST" action="/subscribe">
+              <div class="input">
+                <label for="email">Your Email</label>
+                <input type="email" name="email" id="email" placeholder="example@gmail.com">
+              </div>
+              <div class="button">
+                <button id="subscribe-submit" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="center">
+        <button id="subscribe-btn">Subscribe</button>
+      </div>
+    </nav>
+  </header> 
+   <div class="form-container">
+    <div class="content-container">
+      <form id="form" action="/form" method="POST">
+        <div class="img-container">
+          <img src="formimages/logo-removebg.png" id="logo-img" alt="nutrilife-logo">
+          <h3>Contact us!</h3>
+        </div>
+        <div id="social-icons">
+          <a href="https://www.facebook.com/"><img id="social-logo" src="formimages/facebook.png" alt="facebook-logo"></a>
+          <a href="https://x.com/?lang=en"><img id="social-logo" src="formimages/twitter.png" alt="x-logo"></a>
+          <a href="https://www.instagram.com/"><img id="social-logo" src="formimages/instagram.png" alt="instagram-logo"></a>
+        </div>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your first name.." maxlength="45" required>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." maxlength="45">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email Address" maxlength="255" required>
+        <textarea id="subject" name="subject" placeholder="Questions, Comments, Concerns" maxlength="255" required></textarea>
+        <button type="submit" value="Submit" id="submit-btn">Submit</button>
+        <input type="reset" value="Reset" id="reset-btn">
+      </form>
+      </div>
+   </div>
+   <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <img class="page-logo" src="/images/logo-removebg.png">
+            <div class="footer-column">
+                <h4>Navigation</h4>
+                <ul>
+                  <li><a href="/home.html">Home</a></li>
+                  <li><a href="/meal.html">Meals & Recipes</a></li>
+                  <li><a href="/resources">Resources</a></li>
+                  <li><a href="/about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Get In Touch</h4>
+                <ul>
+                    <li><a href="form.html">Contact Us</a></li>
+                    <li><a href="#">Nutrilife@gmail.com</a></li>
+                    <li><a href="#">+1 800-569-7070</a></li>
+                    <li><a href="#">2500 North Avenue, New York, 10001</a></li>
+                </ul>
+                <a href="https://www.instagram.com"><img class="social-icon" src="/images/instagram.png" alt="Instagram Icon"></a>
+                <a href="https://x.com"><img class="social-icon" src="/images/twitter.png" alt="Twitter Icon"></a>
+                <a href="https://www.facebook.com"><img class="social-icon" src="/images/facebook.png" alt="Facebook Icon"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright &copy; 2024 Nutrilife | All rights reserved | Privacy Policy | Accessibility </p>
+    </div>
+  </footer>
+<script src="/nav.js"></script>
+<script src="/form.js"></script>
+<script src="/app.js"></script>
+<script src="/hamburger.js"></script>
+
+</body>
+</html>

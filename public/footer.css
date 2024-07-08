@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.content-wrap {
+  padding: 20px;
+}
+
+.page-logo {
+  height: 400px;
+  width: 400px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  border-top: 2px solid rgb(233, 226, 226);
+  background-color: #ffff;
+}
+
+.footer-column {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  color:#386641;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.footer-column h4:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color:orange;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  display: block;
+  transition: all 0.3s ease;
+  color: #386641;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.footer-column ul li a:hover {
+  color:rgb(196, 202, 187);
+  padding-left: 10px;
+}
+
+.social-icon {
+  width: 25px;
+  height: 25px;
+  margin: 10px 10px;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  margin-bottom: 10px;
+}
+
+.footer-bottom p {
+  color: black;
+  font-size: 12px;
+  border-top: 2px solid rgb(233, 226, 226);
+  padding-top: 10px;
+}
+
+/* Tablet Query */
+@media screen and (min-device-width: 769px) and (max-device-width: 1024px) { 
+
+  .footer .row {
+      display: flex;
+      flex-direction: row;
+  }
+  
+  .footer .footer-column {
+      flex: 1;
+      margin: 0 10px;
+  }
+}
+
+/* Mobile Query */
+@media(max-width: 768px) {
+  
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-column {
+    margin-bottom: 30px;
+  }
+  
+  .page-logo {
+    height: 250px;
+    width: 250px;
+  }
+  
+  .footer-column h4 {
+    font-size: 15px;
+  }
+  
+  .footer-column ul li a {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 767px) { 
+
+  .footer .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+  }
+  
+  .footer .footer-column {
+      flex: 1;
+      margin: 0 10px;
+  }
+}
