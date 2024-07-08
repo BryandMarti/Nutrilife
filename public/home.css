@@ -163,12 +163,26 @@ body {
       font-size: 1rem;
   }
 }
-@media screen and (min-width: 375px) and (max-width: 767px)  {
+@media screen and (min-width: 250px) and (max-width: 767px)  {
   .logo {
       font-size: 2rem;
   }
   .banner {
       height: 50vh;
+  }
+
+  .promo {
+    font-size: 0.6rem;
+  }
+
+  .banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    padding: 0;
+  }
+  .btn {
+    padding: 0.5rem 0.5rem;
   }
   .banner-content h2 {
       font-size: 1.2rem;
@@ -179,6 +193,7 @@ body {
   }
   .banner-content p {
       font-size: 1rem;
+      margin-bottom: 0;
   }
   .popular-meals h2 {
     font-size: 1.1rem;
@@ -202,4 +217,5 @@ body {
       width: 100%;
       height: auto;
   }
+
 }
