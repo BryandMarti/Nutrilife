@@ -90,7 +90,7 @@ app.get('/search-recipes', async (req, res) => {
       ignorePantry: 'false',
       sort: 'max-used-ingredients',
       offset: '0',
-      number: '3'
+      number: '2'
     },
     headers: {
       'x-rapidapi-key': process.env.RAPIDAPI_KEY,

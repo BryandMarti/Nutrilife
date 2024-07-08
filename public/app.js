@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Clear previous results
         carousel.innerHTML = '';
 
-        data.results.slice(0, 3).forEach(async (recipe) => {
+        data.results.slice(0, 2).forEach(async (recipe) => {
           const recipeElement = document.createElement('div');
           recipeElement.className = 'recipe-item';
 
