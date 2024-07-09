@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
 
 app.post("/subscribe", async (req, res) => {
   const email = req.body.email;
-
+  console.log(req.body);
   connection.query(`INSERT INTO subscriptions (email) VALUES ('${email}')`, function (err, results) {
     if (err) {
       console.error('Error querying the database:', err.stack);
