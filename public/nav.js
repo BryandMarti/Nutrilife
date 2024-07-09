@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.getElementById('close-btn');
   const overlay = document.getElementById('overlay');
   const formElement = subscribeForm.querySelector('form');
+  const emailInput = document.getElementById('email');
 
   // Show the subscribe form and overlay when the button is clicked
   if (subscribeBtn) {
@@ -35,31 +36,59 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopPropagation();
     });
   }
+  formElement.addEventListener('submit', async (event) => {
+    event.preventDefault();
 
-  // Handle form submission
-  if (formElement) {
-    formElement.addEventListener('submit', async (event) => {
-      event.preventDefault(); // Prevent default form submission
-      console.log('Subscribe button clicked');
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      email: emailInput.value
+    })
+  };
 
-      const formData = new FormData(formElement);
-      try {
-        const response = await fetch('/subscribe', {
-          method: 'POST',
-          body: formData
-        });
-        if (response.ok) {
-          console.log('Subscription successful');
-          hideSubscribeForm();
-          alert('Thank you for subscribing!');
-        } else {
-          console.error('Subscription failed');
-        }
-      } catch (error) {
-        console.error('Error during subscription:', error);
-      }
-    });
-  }
+  fetch('/subscribe', options)
+  .then(response => {
+    if (response.ok) {
+      console.log('Subscription successful');
+      hideSubscribeForm();
+      alert('Thank you for subscribing!');
+    } else {
+      console.error('Subscription failed');
+    }
+  })
+  .catch(error => {
+    console.error('Error during subscription:', error);
+  });
+
+});
+
+  // // Handle form submission
+  // if (formElement) {
+  //   formElement.addEventListener('submit', async (event) => {
+  //     event.preventDefault(); // Prevent default form submission
+  //     console.log('Subscribe button clicked');
+
+  //     const formData = new FormData(formElement);
+  //     try {
+  //       const response = await fetch('/subscribe', {
+  //         method: 'POST',
+  //         body: formData
+  //       });
+  //       if (response.ok) {
+  //         console.log('Subscription successful');
+  //         hideSubscribeForm();
+  //         alert('Thank you for subscribing!');
+  //       } else {
+  //         console.error('Subscription failed');
+  //       }
+  //     } catch (error) {
+  //       console.error('Error during subscription:', error);
+  //     }
+  //   });
+  // }
 
   function hideSubscribeForm() {
     subscribeForm.style.display = 'none';
