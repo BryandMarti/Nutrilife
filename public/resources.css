@@ -1,11 +1,24 @@
-<<<<<<< HEAD
-=======
-*{
+body {
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
->>>>>>> main
+header {
+  background-color:white;
+  padding: 2ch 0;
+}
+
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* Styles specific to the resources page */
+
 .hero, .hero2 {
   background-size: cover;
   background-position: center;
@@ -24,9 +37,7 @@
 }
 .hero2 {
   background-image: url('marcel-strauss-fzqxoFJytiE-unsplash.jpg');
-  background-size: contain;
-  background-position: center top;
-  margin-top: 20px;
+  margin-top: 40px; /* Added to create a gap */
 }
 .hero h1, .hero2 h1 {
   font-size: 3em;
@@ -46,10 +57,10 @@
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
-  width: 100%;
+  width: 100%
 }
 .resource-link {
-  text-decoration: none;
+  text-decoration: none; /* Ensure no underline on links */
 }
 .resource-card {
   background-color: #fff;
@@ -84,25 +95,26 @@
 }
 @media (max-width: 768px) {
   .hero, .hero2 {
-      height: 50vh;
+      height: 80vh;
   }
   .hero h1, .hero2 h1 {
-      font-size: 4em;
+      font-size: 2em;
   }
   .hero p, .hero2 p {
-      font-size: 1.5em;
+      font-size: 1em;
   }
   .resource-container {
       flex-direction: column;
       align-items: center;
   }
   .resource-card {
+      width: 80%;
       margin-bottom: 20px;
   }
 }
 @media (max-width: 574px) {
   .hero, .hero2 {
-      height: 35vh;
+      height: 70vh;
       padding: 10px;
   }
   .hero h1, .hero2 h1 {
