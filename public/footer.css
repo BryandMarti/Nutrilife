@@ -144,9 +144,13 @@ ul {
   .footer-column ul li a {
     font-size: 13px;
   }
+
+  .page-logo {
+    width: 80%;
+  }
 }
 
-@media screen and (min-width: 275px) and (max-width: 767px) { 
+@media screen and (min-width: 375px) and (max-width: 767px) { 
 
   .footer .row {
       display: flex;
